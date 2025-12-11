@@ -84,6 +84,10 @@
 			{#if loading}
 				<span class="animate-pulse">Loading...</span>
 			{:else}
+				{result.added 
+        			? `${isShow ? 'Show' : 'Movie'} already exists` 
+        			: `Add ${isShow ? 'Show' : 'Movie'}`
+    			}
 				{result.added ? 'Show already exists' : `Add ${isShow ? 'Show' : 'Movie'}`}
 			{/if}
 		</Button>
